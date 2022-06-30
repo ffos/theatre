@@ -23,7 +23,7 @@ import {
   snapToNone,
   snapToSome,
 } from '@theatre/studio/panels/SequenceEditorPanel/DopeSheet/Right/KeyframeSnapTarget'
-import {useSingleKeyframeInlineEditorPopover} from './useSingleKeyframeInlineEditorPopover'
+import {useKeyframeInlineEditorPopover} from './useSingleKeyframeInlineEditorPopover'
 import usePresence, {
   PresenceFlag,
 } from '@theatre/studio/uiComponents/usePresence'
@@ -102,10 +102,11 @@ const SingleKeyframeDot: React.VFC<ISingleKeyframeDotProps> = (props) => {
 
   const [contextMenu] = useSingleKeyframeContextMenu(node, logger, props)
   const [inlineEditorPopover, openEditor, _, isInlineEditorPopoverOpen] =
-    useSingleKeyframeInlineEditorPopover({
+    useKeyframeInlineEditorPopover({
+      type: 'primitiveProp',
       keyframe: props.keyframe,
       pathToProp: props.leaf.pathToProp,
-      propConf: props.leaf.propConf,
+      propConfig: props.leaf.propConf,
       sheetObject: props.leaf.sheetObject,
       trackId: props.leaf.trackId,
     })
