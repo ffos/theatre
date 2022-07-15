@@ -5,6 +5,7 @@
     "lib": ["ESNext", "DOM"],
     "rootDir": "src",
     "types": ["jest", "node"],
+    "jsx": "react-jsx",
     "emitDeclarationOnly": true,
     "composite": true
   },
