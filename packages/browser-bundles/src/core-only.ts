@@ -1,7 +1,7 @@
 import * as core from '@theatre/core'
 
 // @ts-ignore
-window.Theatre = {
+window.Theatre.js = {
   core,
   get studio() {
     alert(
